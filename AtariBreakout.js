@@ -231,7 +231,7 @@ function update(){
 		//ball and brick
 		for(var index = 0; index < bricks.length; index++){
 			var brick = bricks[index]
-			var contactKey = brick.isContact(b.x+b.w/2,b.y+b.h/2)
+			var contactKey = brick.isContact(b.x,b.y)
 
 			if(contactKey == 0){ //east west
 				b.dx *= -1
@@ -294,7 +294,7 @@ function startNewGame(){
 	bricks = []
 	const spacer = 10
 	const maxRows = 10
-	const blockHeight = canvas.height*.03
+	const blockHeight = canvas.height*.04
 	var xBuffer = spacer + (canvas.width*.02) + Math.ceil((Math.random() * canvas.width*.02))
 	var yBuffer = spacer
 
